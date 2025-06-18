@@ -1,0 +1,364 @@
+/* admin_style.css - تصميم لوحة الإشراف */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-color-light: #333;
+    --text-color-dark: #eee;
+    --bg-light: #f8f9fa;
+    --bg-dark: #212529;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #343a40;
+    --border-color-light: #dee2e6;
+    --border-color-dark: #495057;
+    --shadow-light: 0 .5rem 1rem rgba(0,0,0,.15);
+    --shadow-dark: 0 .5rem 1rem rgba(0,0,0,.3);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    min-height: 100vh;
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: var(--bg-light);
+    color: var(--text-color-light);
+}
+
+body.light-theme .login-card,
+body.light-theme .dashboard-header,
+body.light-theme .dashboard-nav,
+body.light-theme .section-header,
+body.light-theme .order-card,
+body.light-theme .item-card,
+body.light-theme .category-card,
+body.light-theme .user-card,
+body.light-theme .modal-content {
+    background-color: var(--card-bg-light);
+    box-shadow: var(--shadow-light);
+}
+
+body.light-theme .form-control,
+body.light-theme .form-select {
+    background-color: var(--card-bg-light);
+    border-color: var(--border-color-light);
+    color: var(--text-color-light);
+}
+
+body.light-theme .form-control::placeholder {
+    color: #6c757d;
+}
+
+body.light-theme .nav-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.light-theme .nav-btn.active,
+body.light-theme .nav-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme .login-card,
+body.dark-theme .dashboard-header,
+body.dark-theme .dashboard-nav,
+body.dark-theme .section-header,
+body.dark-theme .order-card,
+body.dark-theme .item-card,
+body.dark-theme .category-card,
+body.dark-theme .user-card,
+body.dark-theme .modal-content {
+    background-color: var(--card-bg-dark);
+    box-shadow: var(--shadow-dark);
+}
+
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+    background-color: var(--border-color-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-theme .form-control::placeholder {
+    color: #adb5bd;
+}
+
+body.dark-theme .nav-btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+body.dark-theme .nav-btn.active,
+body.dark-theme .nav-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-theme .h1, body.dark-theme .h2, body.dark-theme .h3, body.dark-theme .h4, body.dark-theme .h5, body.dark-theme .h6,
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+    color: var(--text-color-dark);
+}
+
+body.dark-theme .text-muted {
+    color: #ced4da !important;
+}
+
+body.dark-theme .modal-header {
+    background: var(--gradient-primary);
+}
+
+/* Theme Specific Styles */
+body.gray-theme {
+    --primary-color: #607d8b;
+    --secondary-color: #455a64;
+    --bg-light: #eceff1;
+    --bg-dark: #37474f;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #455a64;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body.red-theme {
+    --primary-color: #e53935;
+    --secondary-color: #b71c1c;
+    --bg-light: #ffebee;
+    --bg-dark: #c62828;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #d32f2f;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body.blue-theme {
+    --primary-color: #1976d2;
+    --secondary-color: #0d47a1;
+    --bg-light: #e3f2fd;
+    --bg-dark: #1565c0;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #1976d2;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+body.green-theme {
+    --primary-color: #388e3c;
+    --secondary-color: #1b5e20;
+    --bg-light: #e8f5e9;
+    --bg-dark: #2e7d32;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #388e3c;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* General Styles */
+.admin-container {
+    min-height: 100vh;
+}
+
+.login-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.dashboard-header .container-fluid {
+    max-width: 1200px;
+}
+
+.dashboard-nav .container-fluid {
+    max-width: 1200px;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.order-card,
+.item-card,
+.category-card,
+.user-card {
+    transition: all 0.3s ease;
+}
+
+.order-card:hover,
+.item-card:hover,
+.category-card:hover,
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-dark);
+}
+
+.order-card {
+    border-right: 5px solid var(--success-color);
+}
+
+.order-card.status-pending {
+    border-color: var(--warning-color);
+}
+
+.order-card.status-preparing {
+    border-color: var(--info-color);
+}
+
+.order-card.status-delivered {
+    border-color: var(--success-color);
+}
+
+.order-card.status-cancelled {
+    border-color: var(--error-color);
+}
+
+.item-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-actions .btn {
+    flex: 1;
+}
+
+/* Loading */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+.loading-overlay.show {
+    display: flex;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Messages */
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: white;
+    font-weight: 600;
+    z-index: 1001;
+    display: none;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.message.show {
+    display: flex;
+    animation: slideIn 0.3s ease;
+}
+
+.message.success {
+    background: var(--success-color);
+}
+
+.message.error {
+    background: var(--error-color);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-header .container-fluid,
+    .dashboard-nav .container-fluid,
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .dashboard-header .d-flex {
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .dashboard-header .dropdown,
+    .dashboard-header .btn {
+        margin-bottom: 10px;
+    }
+
+    .dashboard-nav .btn {
+        margin: 5px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .section-header .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section-header .btn,
+    .section-header .form-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .order-card .order-actions {
+        flex-direction: column;
+    }
+}
+
+
